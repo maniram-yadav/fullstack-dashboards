@@ -50,5 +50,3 @@ model Customer {
   updatedAt DateTime @updatedAt
   orders    Order[]
 }
-
-// output   = "../app/generated/prisma"
