@@ -1,10 +1,16 @@
+
 type Product = {
-  id: string;
-  name: string;
-  price: number;
-  description: string;
-  image: string;
-};
+    id:string;
+    name:string;
+    price:number;
+    originalPrice?:number;
+    rating:number;
+    reviewCount:number;
+    image:string;
+    category?:string;
+    isNew?:boolean;
+    isBestSeller?:boolean;
+}
 
 type BlogPost = {
   id: string;
@@ -15,28 +21,41 @@ type BlogPost = {
   date: string;
 };
 
-// Mock data
+
+
 const products: Product[] = [
   {
     id: '1',
-    name: 'Premium Headphones',
+    name: 'Premium Wireless Headphones',
     price: 199.99,
-    description: 'High-quality over-ear headphones with noise cancellation',
-    image: '/headphones.jpg',
+    originalPrice: 249.99,
+    rating: 4.5,
+    reviewCount: 128,
+    image: 'https://picsum.photos/seed/headphones/600/600',
+    category: 'Audio',
+    isBestSeller: true,
   },
   {
     id: '2',
-    name: 'Wireless Earbuds',
-    price: 129.99,
-    description: 'True wireless earbuds with 24-hour battery life',
-    image: '/earbuds.jpg',
+    name: 'Premium  Cable',
+    price: 22.99,
+    originalPrice: 2222.99,
+    rating: 42.5,
+    reviewCount: 1128,
+    image: 'https://picsum.photos/seed/headphones/600/600',
+    category: 'Electric',
+    isBestSeller: true,
   },
-  {
+   {
     id: '3',
-    name: 'Smart Watch',
-    price: 249.99,
-    description: 'Feature-rich smartwatch with health monitoring',
-    image: '/smartwatch.jpg',
+    name: 'Smartphone',
+    price: 99,
+    originalPrice: 24.99,
+    rating: 45,
+    reviewCount:8,
+    image: 'https://picsum.photos/seed/headphones/600/600',
+    category: 'Mobile',
+    isBestSeller: true,
   },
 ];
 
