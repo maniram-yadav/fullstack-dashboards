@@ -76,16 +76,13 @@ export const AuthProvider = ({children} : {children:React.ReactNode}) => {
         setUser(null);
         localStorage.removeItem('user');
     };
-    
-   return (
-    <div></div>
-   );
 
-    // return (
-    //     <AuthContext.Provider value={{user,login,register,logout,loading}}>
-    //     {children}
-    //     </AuthContext.Provider>
-    //     );
+   
+    return (
+        <AuthContext.Provider value={{user,login,register,logout,loading}}>
+        {children}
+        </AuthContext.Provider>
+        );
 };
 
 export const useAuth = () => useContext(AuthContext);
