@@ -13,7 +13,7 @@ const users : user[] = [
 
 export async function POST(request:Request) {
     const {email,password,name} = await request.json();
-
+    console.log(request.json())
     if(!email||!password){
         return NextResponse.json(
             {error:'Email and password are required'},
@@ -38,12 +38,14 @@ export async function POST(request:Request) {
         return NextResponse.json(newUser);
     } else{
         const user = users.find((user) => user.email === email);
+        console.log(user);
         if(!user) {
             return NextResponse.json(
                 {error:'Invalid Credentials'},
                 {status:401}
             );
         }
+        console.log(user);
         return NextResponse.json(user);
     }
 }
