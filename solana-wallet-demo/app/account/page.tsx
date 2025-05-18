@@ -96,7 +96,8 @@ export default function Accountpage(){
                   <button
                     onClick={handleAirdrop}
                     disabled={loading}
-                    className="text-sm bg-solana-green text-white px-3 py-1 rounded hover:bg-green-600 disabled:opacity-50"
+                    className="cursor-pointer border-2 border-gray-200  text-sm bg-solana-green text-white px-3 py-1 
+                    rounded bg-blue-400 hover:bg-green-600 disabled:opacity-50"
                   >
                     Request Airdrop
                   </button>

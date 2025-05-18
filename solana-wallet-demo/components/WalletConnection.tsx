@@ -25,7 +25,7 @@ export function WalletConnection() {
                         <button onClick={() => disconnect().catch(() => { })}
                             className="px-2 py-2 bg-red-500 text-white rounded hover:bg-red-600 transition"
                         >
-                            Disconnected
+                            Disconnect
                         </button>
                     </div>
                 ) : (<WalletMultiButton

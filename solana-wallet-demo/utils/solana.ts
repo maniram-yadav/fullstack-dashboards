@@ -7,7 +7,7 @@ export const  getBalance = async (publicKey : PublicKey) => {
     return balance/LAMPORTS_PER_SOL
 }
 
-export const requestAirdrop = async (publickey : PublicKey, amount:number = 1) =>{
+export const requestAirdrop = async (publickey : PublicKey, amount:number = 5) =>{
     const connection = new Connection(clusterApiUrl('devnet'),'confirmed')
     const signature = await connection.requestAirdrop(
         publickey,amount*LAMPORTS_PER_SOL
