@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Wallet adapter styles */
+.wallet-adapter-button {
+  @apply !font-normal !text-base !rounded-lg;
+}
+
+.wallet-adapter-dropdown {
+  @apply w-full;
+}
+
+.wallet-adapter-modal-wrapper {
+  @apply bg-white dark:bg-gray-800;
+}
+
+.wallet-adapter-modal-button-close {
+  @apply bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600;
+}

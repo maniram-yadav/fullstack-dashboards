@@ -1,12 +1,13 @@
+'use client';
 import { WalletConnection } from "@/components/WalletConnection";
 import { useWallet } from "@solana/wallet-adapter-react";
 
 export default function Home(){
   const {publicKey} = useWallet()
+
   return (
-    <main className="min-h-screen bg-gradient-to-b 
-    from-solana-purple/5 to-white flex items-center justify-center p-4">
-      <div className="w-full max-w-md bg-white rounded-xl shadow-lg p-6 space-y-6
+    <main className="min-h-screen bg-gradient-to-b from-solana-purple/5 to-white flex items-center justify-center p-4">
+       <div className="w-full max-w-md bg-white rounded-xl shadow-lg p-6 space-y-6
       border border-gray-200">
         <h1 className="text-2xl font-bold text-center text-gray-800">
           Solana Wallet Connection
@@ -30,7 +31,7 @@ export default function Home(){
           <p>Supported wallets : phantom, Solfare, backpack</p>
           <p>Build with nextjs and tailwind css</p>
         </div>
-      </div>
+      </div> 
     </main>
   );
 }
