@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { ethers } from "ethers";
 
 export default function Wallet() {
-    
+
     const [account, setAccount] = useState<string | null>(null)
     const [balance, setBalance] = useState<string | null>(null)
 
@@ -36,11 +36,11 @@ export default function Wallet() {
          bg-gray-900 text-white p-4">
             {!account ? (
                 <button onClick={connectWallet} className="px-3 py-3 rounded-lg text-white bg-indigo-600
-                hover:bg-indigo-700 min-h-screen pointer-cursor"> Login</button>
+                hover:bg-indigo-700 size-max cursor-pointer">  Connect with MetaMask</button>
             ) :
                 <div>
-                    <button onClick={disconnectWallet} className="px-3 py-3 rounded-lg text-white bg-indigo-600
-                hover:bg-indigo-700 min-h-screen  pointer-cursor"> Logout</button>
+                    <button onClick={disconnectWallet} className=" mx-2 my-2 px-3 py-3 rounded-lg text-white bg-indigo-600
+                hover:bg-indigo-700 size-max cursor-pointer float-right"> Logout</button>
                     <div>
                         {account}
                     </div>
