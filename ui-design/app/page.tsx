@@ -15,6 +15,12 @@ import FadeTooltip from "@/components/tooltip/FadeInToolTip";
 // import BounceTooltip from "@/components/tooltip/BounceTooltip";
 import BlueBorderTooltip from "@/components/tooltip/BlueBorderTooltip";
 
+import ExpandingSearchBar from "@/components/searchbar/ExpandingSearchBar";
+import FloatingLabelSearchBar from "@/components/searchbar/FloatingLabelSearchBar";
+import GlowingSearchBar from "@/components/searchbar/GlowingSearchBar";
+import MorphingSearchButton from "@/components/searchbar/MorphingSearchButton";
+import SlideUpSearchBar from "@/components/searchbar/SlideUpSearchBar";
+
 import {  useState} from "react";
 
 export default function Home() {
@@ -46,11 +52,21 @@ export default function Home() {
 {/* tooltip */}
 {/* <FadeTooltip /> */}
 {/* <BounceTooltip /> */}
-<BlueBorderTooltip />
+
+{/* <BlueBorderTooltip /> */}
 
 {/* modals */}
 {/* <SlideUpModal /> */}
 
+
+
+{/* search bar */}
+
+<ExpandingSearchBar />
+<FloatingLabelSearchBar />
+<GlowingSearchBar />
+<MorphingSearchButton />
+<SlideUpSearchBar />
 
 {/* card */}
      {/* <FlipCard />
