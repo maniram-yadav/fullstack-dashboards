@@ -12,7 +12,8 @@ import GlowCheckbox from "@/components/checkbox/GlowCheckbox";
 import SlideUpModal from "@/components/modal/SlideUpModal";
 import FlipCheckbox from "@/components/checkbox/FlipCheckbox";
 import FadeTooltip from "@/components/tooltip/FadeInToolTip";
-import BounceTooltip from "@/components/tooltip/BounceTooltip";
+// import BounceTooltip from "@/components/tooltip/BounceTooltip";
+import BlueBorderTooltip from "@/components/tooltip/BlueBorderTooltip";
 
 import {  useState} from "react";
 
@@ -44,7 +45,8 @@ export default function Home() {
 
 {/* tooltip */}
 {/* <FadeTooltip /> */}
-<BounceTooltip />
+{/* <BounceTooltip /> */}
+<BlueBorderTooltip />
 
 {/* modals */}
 {/* <SlideUpModal /> */}
