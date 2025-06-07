@@ -11,6 +11,7 @@ import ClassicNavbar from "@/components/navbar/ClassicNavbar";
 import GlowCheckbox from "@/components/checkbox/GlowCheckbox";
 import SlideUpModal from "@/components/modal/SlideUpModal";
 import FlipCheckbox from "@/components/checkbox/FlipCheckbox";
+import FadeTooltip from "@/components/tooltip/FadeInToolTip";
 
 import {  useState} from "react";
 
@@ -40,6 +41,8 @@ export default function Home() {
      {/* <GlowCheckbox /> */}
           <FlipCheckbox />
 
+{/* tooltip */}
+<FadeTooltip />
 
 {/* modals */}
 {/* <SlideUpModal /> */}
