@@ -10,6 +10,7 @@ import GradientLayout from "@/components/GradientLayout";
 import ClassicNavbar from "@/components/navbar/ClassicNavbar";
 import GlowCheckbox from "@/components/checkbox/GlowCheckbox";
 import SlideUpModal from "@/components/modal/SlideUpModal";
+import FlipCheckbox from "@/components/checkbox/FlipCheckbox";
 
 import {  useState} from "react";
 
@@ -23,8 +24,6 @@ export default function Home() {
 
   return (
     <div>
-      {/* <button onClick={()=>setComponent('flipcard')}>Flipcard</button>
-      <button onClick={()=>setComponent('groweffect')}>GrowEffectCard</button> */}
       
       {/* <MinimalDashboard /> */}
       {/* <DarkProfessional /> */}
@@ -34,14 +33,17 @@ export default function Home() {
       {/* <EcommerceLayout /> */}
      
      {/* navbar */}
-
      {/* <ClassicNavbar /> */}
+
 
           {/* checkbox */}
      {/* <GlowCheckbox /> */}
+          <FlipCheckbox />
+
 
 {/* modals */}
-<SlideUpModal />
+{/* <SlideUpModal /> */}
+
 
 {/* card */}
      {/* <FlipCard />
