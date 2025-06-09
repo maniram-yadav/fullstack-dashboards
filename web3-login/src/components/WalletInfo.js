@@ -3,7 +3,10 @@
 import { useMetaMask } from '@/context/MetaMaskContext';
 
 const WalletInfo = () => {
-  const { isConnected, account, balance, connectWallet, disconnectWallet } = useMetaMask();
+  const { isConnected, account, balance, connectWallet, disconnectWallet,
+    network,
+    chainId,
+  } = useMetaMask();
 
   const formatAddress = (address) => {
     if (!address) return '';
@@ -14,7 +17,7 @@ const WalletInfo = () => {
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 p-4">
       <div className="w-full max-w-md bg-white rounded-lg shadow-md p-6 space-y-4">
         <h1 className="text-2xl font-bold text-center text-gray-800">MetaMask Login Demo</h1>
-        
+
         {!isConnected ? (
           <button
             onClick={connectWallet}
@@ -35,7 +38,7 @@ const WalletInfo = () => {
                 </p>
               </div>
             </div>
-            
+
             <button
               onClick={disconnectWallet}
               className="w-full py-2 px-4 bg-red-600 hover:bg-red-700 text-white font-medium rounded-md transition duration-200"
@@ -44,7 +47,7 @@ const WalletInfo = () => {
             </button>
           </div>
         )}
-        
+
         {/* {typeof window !== 'undefined' || !window.ethereum && (
           <div className="mt-4 p-3 bg-yellow-100 border border-yellow-400 text-yellow-700 rounded">
             <p>MetaMask is not installed. Please install the <a href="https://metamask.io/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">MetaMask extension</a> to use this feature.</p>

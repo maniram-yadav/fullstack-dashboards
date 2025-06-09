@@ -8,8 +8,10 @@ const MetaMaskContext = createContext({
   isConnected: false,
   account: null,
   balance: null,
-  connectWallet: () => {},
-  disconnectWallet: () => {},
+  network: null,
+  chainId: null,
+  connectWallet: () => { },
+  disconnectWallet: () => { },
   provider: null,
 });
 
@@ -18,28 +20,30 @@ export const MetaMaskProvider = ({ children }) => {
   const [account, setAccount] = useState(null);
   const [balance, setBalance] = useState(null);
   const [provider, setProvider] = useState(null);
+  const [network, setNetwork] = useState(null);
+  const [chainId, setChainid] = useState(null);
 
   useEffect(() => {
     const checkConnection = async () => {
       const provider = await detectEthereumProvider();
-      
+
       if (provider) {
         setProvider(provider);
-        
+
         // Check if user is already connected
         const accounts = await provider.request({ method: 'eth_accounts' });
-        
+
         if (accounts.length > 0) {
           await handleConnection(accounts[0], provider);
         }
-        
+
         provider.on('accountsChanged', handleAccountsChanged);
         provider.on('chainChanged', () => window.location.reload());
       }
     };
-    
+
     checkConnection();
-    
+
     return () => {
       if (window && provider) {
         // provider.removeListener('accountsChanged', handleAccountsChanged);
@@ -58,13 +62,18 @@ export const MetaMaskProvider = ({ children }) => {
   };
 
   const handleConnection = async (account, provider) => {
-    setAccount(account);
-    setIsConnected(true);
-    
-    // Get balance
+
     const web3Provider = new ethers.BrowserProvider(provider);
     const balance = await web3Provider.getBalance(account);
+   
+    // const network = await provider.getNetwork();
+    // setNetwork(network.name);
+    // setChainid(network.chainId.toString());
+   
     setBalance(ethers.formatEther(balance));
+    setAccount(account);
+    setIsConnected(true);
+
   };
 
   const connectWallet = async () => {
@@ -73,8 +82,12 @@ export const MetaMaskProvider = ({ children }) => {
         alert('MetaMask is not installed. Please install it to use this feature.');
         return;
       }
-      
+
       const accounts = await provider.request({ method: 'eth_requestAccounts' });
+
+
+      const address = accounts[0];
+      console.log("connected to MetaMask with address: ", address);
       await handleConnection(accounts[0], provider);
     } catch (error) {
       console.error('Error connecting to MetaMask:', error);
@@ -87,7 +100,7 @@ export const MetaMaskProvider = ({ children }) => {
     setIsConnected(false);
     // provider.web3Provider.disconnectWallet();
     window.localStorage.clear();
-    
+
 
   };
 
@@ -97,6 +110,8 @@ export const MetaMaskProvider = ({ children }) => {
         isConnected,
         account,
         balance,
+        network,
+        chainId,
         connectWallet,
         disconnectWallet,
         provider,
