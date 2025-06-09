@@ -85,7 +85,7 @@ export const MetaMaskProvider = ({ children }) => {
     setAccount(null);
     setBalance(null);
     setIsConnected(false);
-    provider.web3Provider.disconnectWallet();
+    // provider.web3Provider.disconnectWallet();
     window.localStorage.clear();
     
 
