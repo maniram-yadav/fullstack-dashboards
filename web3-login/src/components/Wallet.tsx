@@ -6,17 +6,21 @@ export default function Wallet() {
 
     const [account, setAccount] = useState<string | null>(null)
     const [balance, setBalance] = useState<string | null>(null)
+    
 
-    const isMetaMaskInstalled = () => typeof window !== 'undefined' && typeof window.ethereum !== 'undefined'
 
     const connectWallet = async () => {
+    const isMetaMaskInstalled = () => typeof window !== 'undefined' && typeof window.ethereum !== 'undefined'
+
         if (!isMetaMaskInstalled()) {
             alert('metamask is not detecetd. Install it first')
             return
         }
         try {
             const provider = new ethers.BrowserProvider(window.ethereum)
+            // setProvider(prd);
             const accounts = await provider.send('eth_requestAccounts', [])
+            
             const address = accounts[0]
             setAccount(address)
             const balanceBigInt = await provider.getBalance(address)
@@ -29,10 +33,14 @@ export default function Wallet() {
     const disconnectWallet = () => {
         setAccount(null)
         setBalance(null)
+        window.localStorage.clear();
+        
+    // provider.web3Provider.disconnectWallet();
+    
     }
 
     return (
-        <div className="flex flex-col items-center justify-center min-h-screen
+        <div className="flex flex-col items-start justify-center min-h-screen
          bg-gray-900 text-white p-4">
             {!account ? (
                 <button onClick={connectWallet} className="px-3 py-3 rounded-lg text-white bg-indigo-600
