@@ -1,7 +1,7 @@
 .view{
     transform:scale(.9);
     transform:translateY(10px);
-    opacity:.2;
+    opacity:0;
     transition: all 1s;
 }
 

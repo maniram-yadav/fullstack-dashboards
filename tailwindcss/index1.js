@@ -1,4 +1,5 @@
 "use strict";
+
 const sections = document.querySelectorAll(".view");
 const objOptions = {
     root: null,
