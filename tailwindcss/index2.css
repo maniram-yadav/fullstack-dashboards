@@ -41,12 +41,11 @@ body {
 /* This class will be added by JavaScript when the section is in view */
 .show-on-scroll {
   opacity: 1;
-  background-color: gray;
-  border:2px solid white;
-  border-radius:5px;
 }
+
 .bg {
-  background-color: gray;
+  opacity: 1;
+  background-color: red;
   border: 2px solid white;
   border-width: 2px;
 }
