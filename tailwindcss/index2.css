@@ -1,0 +1,52 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.header {
+  height: 200px;
+  background-color: lightblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section {
+  height: 400px; /* Adjust height as needed */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0; /* Initially hidden */
+  transition: all 1.5s ease-in-out; 
+  /* transition: border-width 1s ease-in-out;  */
+}
+
+.section:nth-child(even) {
+  background-color: #f0f0f0;
+}
+
+.section:nth-child(odd) {
+  background-color: #e0e0e0;
+}
+
+.footer {
+  height: 100px;
+  background-color: lightgray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* This class will be added by JavaScript when the section is in view */
+.show-on-scroll {
+  opacity: 1;
+  background-color: gray;
+  border:2px solid white;
+  border-radius:5px;
+}
+.bg {
+  background-color: gray;
+  border: 2px solid white;
+  border-width: 2px;
+}
