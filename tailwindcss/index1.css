@@ -1,0 +1,12 @@
+.view{
+    transform:scale(.9);
+    transform:translateY(10px);
+    opacity:.2;
+    transition: all 1s;
+}
+
+.appear {
+    transform:scale(1);
+    transform:translateY(0px);
+    opacity:1;
+}
