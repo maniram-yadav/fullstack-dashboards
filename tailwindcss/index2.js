@@ -2,7 +2,7 @@ const sections = document.querySelectorAll('.section');
 const options = {
     threshold: 0.5 
   };
-  
+
 // const observer = new IntersectionObserver((entries, observer) => {
 //     entries.forEach(entry => {
 //       if (entry.isIntersecting) {
@@ -42,7 +42,6 @@ document.addEventListener('scroll', event => {
     myElement.classList.remove('bg');
     myElement.classList.remove('show-on-scroll');
   }
-
 });
 
 });
