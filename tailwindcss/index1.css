@@ -10,3 +10,55 @@
     transform:translateY(0px);
     opacity:1;
 }
+
+.step::after {
+ content: ""; 
+  display: block;
+  position: absolute;
+  width: 90%;  
+  height: 2px; 
+  background-color: gray; 
+  top: 10px;  
+  left: 60px;  
+}
+
+.step{
+    position: relative;
+}
+.join{
+    position: relative;
+}
+
+.join::before{
+    position: absolute;
+    display: block;
+    width: 400%;
+    border: 1px;
+    height: 1px;
+    background-color: gray; 
+    content: "";
+    top: 25px;
+    left: 100px;
+}
+
+.join::after{
+    position: absolute;
+    display: block;
+    width: 400%;
+    border: 1px;
+    height: 1px;
+    background-color: gray; 
+    content: "";
+    top: 25px;
+    right: 100px;
+}
+
+/* .join::after {
+  content: ""; 
+  position: absolute;
+  width: 90%;  
+  height: 2px; 
+  background-color: gray; 
+  top: 10px;  
+  left: 60px;  
+} */
