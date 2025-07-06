@@ -1,0 +1,110 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="dashware.css" />
+</head>
+
+<body class="">
+    <!-- Header -->
+    <header class="w-[100%] h-auto p-3 border-b-1   bg-gray-100">
+   
+        <div class="flex flex-col sm:flex-row flex-nowrap items-center 
+        justify-between">
+            <div>
+                <div class="sm:hidden clear absolute top-1 left-1
+                text-sm place-items-center pl-4 mb-3"> 
+                Helping businesses choose better software since 1999</div>
+                <div class="sm:hidden inline-block cursor-pointer 
+                absolute left-6 top-10" onclick="toggleMenu()">Menu</div>
+                <div class="inline-block">
+                    <img src="https://www.capterra.com/assets-bx-capterra/_next/static/media/logo.915ba944.svg" 
+                    width="200" height="200" alt="" 
+                    class="pt-4 sm:pt-0"/>
+                </div>
+                <div class="inline-block sm:hidden absolute top-11 
+                right-5">
+                    User</div>
+                <div class="hidden sm:inline-block">
+                    <div>
+                        Helping businesses choose </div>
+                        <div>
+                        better software since 1999
+                    </div>
+                </div>
+            </div>
+            <div>
+                    <div class="sm:inline-block relative">
+                        <input name="search" type="text" 
+                        placeholder="What can we help you find"
+                        class="rounded-[50px] pl-5
+                         w-[300px] bg-white border-1 border-gray-500
+                            p-1 pr-9"
+                        />
+                        <span class="searchicon  inline-block absolute
+                        right-5 top-1"> S</span>
+                    </div>
+                    <div class="hidden sm:inline-block">
+                        <button class="hover underline font-md
+                        text-xl pl-10 pr-10  cursor-pointer">
+                            Log In
+                        </button>
+                        
+                    </div>
+                    <div class="hidden sm:inline-block">
+                        <button class="hover bg-green-400
+                        p-2 font-md hover:bg-green-500
+                        rounded-[60px] text-xl pl-10
+                         pr-10 text-white hover:shadow-lg
+                         hover:shadow-gray-600 cursor-pointer">
+                           Sign Up
+                        </button>
+                        
+                    </div>
+            </div>
+    </div>
+
+        
+    </header>
+
+    <!-- Nav -->
+    <div class="menu hidden sm:block sm:bg-gray-200 pl-8 sm:p-0
+         h-auto w-auto absolute sm:relative 
+        top-0 left-0 z-10 bg-black  text-gray-200 
+        sm:text-gray-800 h-full sm:min-h-auto">
+        <div class="flex  flex-col sm:flex-row 
+        items-center justify-between  sm:text-lg  text-xl ">
+        <div class="close sm:hidden absolute right-6 top-5 cursor-pointer
+            "><button onclick="toggleMenu()">X</button></div>
+        <div class="flex flex-col sm:flex-row flex-cols-1
+         sm:flex-cols-4 text-gray-400">
+            <div class="sm:hidden p-5 text-gray-300 text-xl pt-6">Menu</div>
+            <div class="pl-2 pr-2  sm:pt-2 sm:w-full border-b-1 sm:hidden
+                border-gray-200"></div>
+            <div class="sm:p-6  sm:pt-2 p-2 cursor-pointer pt-10 pl-6">Software Categories</div>
+            <div class="p-6 sm:pt-2 cursor-pointer">Service Categories</div>
+            <div class="p-6  sm:pt-2 cursor-pointer">Guides & Research</div>
+            <div class="p-6  sm:pt-2 cursor-pointer">Who we Are</div>
+        </div>
+        <div class="flex flex-col sm:flex-row flex-cols-1 
+                sm:flex-cols-2">
+            <div class="p-6  sm:pt-2 pl-0 cursor-pointer">For venders</div>
+            <div class="p-6  sm:pt-2 pl-0 cursor-pointer">Write a Review</div>
+        </div>
+
+        </div>
+    </div>
+
+
+    <!-- dashboard -->
+    <div>Dashboard Software System</div>
+    <div>List</div>
+    <div>subscrbe</div>
+    <div>Footer</div>
+    <script src="index1.js"></script>
+</body>
+
+</html>
