@@ -5,13 +5,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+
     <link rel="stylesheet" href="dashware.css" />
 </head>
 
 <body class="">
     <!-- Header -->
     <header class="w-[100%] h-auto p-3 border-b-1   bg-gray-100">
-
+        <i class="fas fa-clock"></i>
         <div class="flex flex-col sm:flex-row flex-nowrap items-center 
         justify-between">
             <div>
@@ -19,7 +21,8 @@
                 text-sm place-items-center pl-4 mb-3">
                     Helping businesses choose better software since 1999</div>
                 <div class="sm:hidden inline-block cursor-pointer 
-                absolute left-6 top-10" onclick="toggleMenu()">Menu</div>
+                absolute left-6 top-10" onclick="toggleMenu()">Menu
+                </div>
                 <div class="inline-block">
                     <img src="https://www.capterra.com/assets-bx-capterra/_next/static/media/logo.915ba944.svg"
                         width="200" height="200" alt="" class="pt-4 sm:pt-0" />
@@ -67,9 +70,9 @@
     </header>
 
     <!-- Nav -->
-    <div class="menu hidden sm:block sm:bg-gray-200 pl-8 sm:p-0
+    <div class="menu  sm:block sm:bg-gray-200 sm:pl-8 sm:p-0
          h-auto w-auto absolute sm:relative 
-        top-0 left-0 z-10 bg-black  text-gray-200 
+        top-0 left-0 z-10 bg-black  text-gray-600 
         sm:text-gray-800 h-full sm:min-h-auto">
         <div class="flex  flex-col sm:flex-row 
         items-center justify-between  sm:text-lg  text-xl ">
@@ -77,18 +80,35 @@
             "><button onclick="toggleMenu()">X</button></div>
             <div class="flex flex-col sm:flex-row flex-cols-1
          sm:flex-cols-4 text-gray-400">
+
                 <div class="sm:hidden p-5 text-gray-300 text-xl pt-6">Menu</div>
                 <div class="pl-2 pr-2  sm:pt-2 sm:w-full border-b-1 sm:hidden
                 border-gray-200"></div>
-                <div class="sm:p-6  sm:pt-2 p-2 cursor-pointer pt-10 pl-6">Software Categories</div>
-                <div class="p-6 sm:pt-2 cursor-pointer">Service Categories</div>
-                <div class="p-6  sm:pt-2 cursor-pointer">Guides & Research</div>
-                <div class="p-6  sm:pt-2 cursor-pointer">Who we Are</div>
+
+                <div class="sm:p-6 relative sm:pt-2 p-2  cursor-pointer pt-10 pl-3
+                    group">Software Categories
+                    <div class="hidden group-hover:block sm:absolute ml-2 text-black sm:w-60 bg-black sm:bg-white
+                    w-40
+                        text-white sm:text-black text-xs sm:text-lg
+                        sm:border-1 sm:border-gray-200 sm:shadow-lg z-10">
+                        <div class="sm:hover:bg-gray-100  sm:p-2 pl-4 pr-5 ">CRM Software</div>
+                        <div class="sm:hover:bg-gray-100  sm:p-2 pl-4 pr-5 ">Email marketing Software</div>
+                        <div class="sm:hover:bg-gray-100  sm:p-2 pl-4 pr-5 ">Help Desk Software</div>
+                        <div class="sm:hover:bg-gray-100  sm:p-2 pl-4 pr-5 ">Human Resource Software</div>
+                        <div class="sm:hover:bg-gray-100  sm:p-2 pl-4 pr-5 ">Project Management Software</div>
+                        <div class="sm:hover:bg-gray-100  sm:p-2 pl-4 pr-5 ">Browse All Categories</div>
+                    </div>
+
+                </div>
+                <div class="pl-3 sm:p-6 sm:pt-2 cursor-pointer">Service Categories</div>
+                <div class="pl-3 sm:p-6  sm:pt-2 cursor-pointer">Guides & Research</div>
+                <div class="pl-3 sm:p-6  sm:pt-2 cursor-pointer">Who we Are</div>
             </div>
+
             <div class="flex flex-col sm:flex-row flex-cols-1 
                 sm:flex-cols-2">
-                <div class="p-6  sm:pt-2 pl-0 cursor-pointer">For venders</div>
-                <div class="p-6  sm:pt-2 pl-0 cursor-pointer">Write a Review</div>
+                <div class="pl-3 sm:p-6  sm:pt-2  cursor-pointer">For venders</div>
+                <div class="pl-3  sm:p-6  sm:pt-2 cursor-pointer">Write a Review</div>
             </div>
 
         </div>
@@ -97,7 +117,7 @@
 
     <!-- dashboard -->
     <div class="m-3 ml-6 mr-6">
-        <div class="flex border-1 flex-col sm:flex-cols-4 sm:flex-row 
+        <div class="flex border-1 flex-col sm:flex-cols-4  sm:flex-row 
             items-start sm:items-center  justify-between 
             border-gray-700 shadow-gray-600 shadow-sm">
 
@@ -142,7 +162,7 @@
                 </div>
 
             </div>
-            <div class="order-3 sm:order-2 pl-6 hidden sm:block">
+            <div class="order-3 sm:order-2 pl-6 pb-4 ">
                 <div class="font-bold text-lg uppercase">Key Features</div>
                 <div class="inline-block relative p-[5px] pl-30 pr-20 mt-3 bg-green-500 rounded-[50px]
                         border-2 border-green-500">
@@ -151,7 +171,7 @@
                 </div>
                 <div class="inline-block">9/10</div>
             </div>
-            <div class="order-3 sm:order-3 pl-6">
+            <div class="order-3 sm:order-3 pl-6 hidden sm:block">
                 <div class="p-3">
                     <div class="font-bold uppercase">Rating</div>
                     <div class="relative">
@@ -187,7 +207,7 @@
             <div class="order-2 sm:order-4 pl-6">
                 <div class="m-3 mr-5">
                     <button class="bg-red-600 rounded-[50px]
-                     p-2 pl-10 pr-10 text-white w-[400px]
+                     p-2 pl-10 pr-10 text-white w-[300px]
                     cursor-pointer
                     ">VISIT WEBSITE</button>
                 </div>
@@ -205,18 +225,53 @@
 
 
 
-    <div>List</div>
-    <div>subscrbe</div>
 
+    <div>
+        <div class="m-3 ml-6 mr-6 mb-8 bg-cyan-100 border-1 border-gray-400 p-8">
+            <div class="text-center">Comapre all software on Dashware's <a class="font-bold text-black cursor-pointer">
+                    Dashboard System Software</a> Directory </div>
+        </div>
+    </div>
+
+
+
+
+
+    <div class="m-3 ml-6 mr-6 mb-8 c border-1 border-gray-400 p-3">
+
+        <div class="font-bold text-3xl">Get the list: Top-rated software</div>
+        <div class="mt-8">Fill out the form and we'll send a list of the top-rated﻿ software based on real user reviews
+            directly to your inbox.</div>
+        <div class="mt-10">
+            <label></label>
+            Email <span class="text-red-600">*</span>
+            <input type="email" name="email" class="w-full h-10 border-1 focus:border-gray-900 border-gray-900" />
+            </label>
+        </div>
+
+        <div class="mt-8 text-sm">By proceeding, you agree to our <span class="font-bold cursor-pointer">Terms Of
+                Use</span> and <span class="font-bold cursor-pointer">Privacy Policy</span> .</div>
+        <div class="p-10 mb-5 mr-5 relative">
+            <button class="bg-red-400 p-3 pl-6 pr-6 text-white hover:bg-red-500 rounded-[50px] absolute right-6">Send me
+                the list</button>
+        </div>
+    </div>
+
+    <!-- 
+careers@mantech. ccom
+hr@digipulsetech. ccom -->
 
 
     <!-- Footer  -->
-    <div class="w-full h-auto p-5 bg-black text-white">
+    <div class="w-full h-auto p-5 pl-10 bg-black text-white">
         <div>
-            <div>/ WHO WE ARE</div>
-            <div>The #1 destination for finding the right software and services</div>
-            <div>We help your organization save time, increase productivity and accelerate growth.</div>
-            <div><a>Learn More About Capterra</a></div>
+            <div class="text-lg font-md text-gray-400 pb-5">/ WHO WE ARE</div>
+            <div class="text-4xl  font-md text-white pb-5">The #1 destination for finding the right software and
+                services</div>
+            <div class="text-md font-md text-gray-400 pb-5">We help your organization save time, increase productivity
+                and accelerate growth.</div>
+            <div class="text-lg font-md text-blue-400 pb-5"><a class="hover:cursor-pointer">Learn More About
+                    Capterra</a></div>
         </div>
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4  ">
             <div class="w-full  p-5">
@@ -270,6 +325,7 @@
         </div>
     </div>
     <script src="index1.js"></script>
+
 </body>
 
 </html>
