@@ -13,8 +13,8 @@
 <body class="">
     <!-- Header -->
     <header class="w-[100%] h-auto p-3 border-b-1   bg-gray-100">
-        
-        
+
+
         <div class="flex flex-col sm:flex-row flex-nowrap items-center 
         justify-between">
             <div>
@@ -23,16 +23,16 @@
                     Helping businesses choose better software since 1999</div>
                 <div class="sm:hidden inline-block cursor-pointer 
                 absolute left-6 top-10" onclick="toggleMenu()">
-                <ion-icon name="menu-sharp"></ion-icon>
+                    <ion-icon name="menu-sharp"></ion-icon>
                 </div>
                 <div class="inline-block">
                     <img src="https://www.capterra.com/assets-bx-capterra/_next/static/media/logo.915ba944.svg"
-                        width="200" height="200" alt="" class="pt-4 sm:pt-0" />
+                        width="200" height="200" alt="" class="pt-8 sm:pt-0" />
                 </div>
                 <div class="inline-block sm:hidden absolute top-11 
                 right-5">
-                <ion-icon name="person-sharp"></ion-icon>
-                    </div>
+                    <ion-icon name="person-sharp" class="cursor-pointer" onclick="toggleForm()"></ion-icon>
+                </div>
                 <div class="hidden sm:inline-block">
                     <div>
                         Helping businesses choose </div>
@@ -46,13 +46,13 @@
                     <input name="search" type="text" placeholder="What can we help you find" class="rounded-[50px] pl-5
                          w-[300px] bg-white border-1 border-gray-500
                             p-1 pr-9 focus:shadow-xl focus:shadow-gray-900" />
-                            
+
                     <span class="searchicon  inline-block absolute
                         right-4 top-2 cursor-pointer"><ion-icon name="search-sharp"></ion-icon></span>
                 </div>
                 <div class="hidden sm:inline-block">
                     <button class="hover underline font-md
-                        text-xl pl-10 pr-10  cursor-pointer">
+                        text-xl pl-10 pr-10  cursor-pointer" onclick="toggleForm()">
                         Log In
                     </button>
 
@@ -62,7 +62,7 @@
                         p-2 font-md hover:bg-green-500
                         rounded-[60px] text-xl pl-10
                          pr-10 text-white hover:shadow-lg
-                         hover:shadow-gray-600 cursor-pointer">
+                         hover:shadow-gray-600 cursor-pointer" onclick="toggleForm()">
                         Sign Up
                     </button>
 
@@ -73,11 +73,87 @@
 
     </header>
 
+
+    <!-- login/signup form -->
+    <div class="fixed loginform hidden  top-0 left-0 bg-[rgba(0,0,0,0.5)] w-full h-full z-20 overflow-hidden">
+        <div class="modal bg-white border-1 border-black 
+                    w-[100%] sm:w-[50%] h-[100%] z-100 top-0 m-auto">
+                 <div class="relative">
+                 <div class="closeform absolute top-5 right-5 text-gray-600 cursor-pointer" onclick="toggleForm()">X</div>
+              <div class="table">
+
+                <div class="table-row">
+                    
+                    <div class="hidden sm:table-cell w-50 h-[600px] bg-black "></div>
+                    <div class="table-cell">
+                        <div class="w-[100%] sm:w-auto m-0 sm:mt-15 p-10">
+                            <div class="font-bold text-xl uppercase"> / Welcome to captera</div>
+                            <div class="text-sm font-bold text-gray-600 ">Log in with</div>
+                            <div>
+                                <div class="inline-block">
+                                    <button
+                                        class="bg-white border-2 border-blue-400 m-1 p-3 pr-6 pl-6
+                                          cursor-pointer font-bold tracking-widest rounded-[50px]">
+                                        <ion-icon name="logo-google"></ion-icon>
+                                        Google</button>
+                                </div>
+                                <div class="inline-block">
+
+                                    <button class="bg-white border-2 border-blue-400 m-0 p-3 pr-6 pl-6 font-bold tracking-widest  rounded-[50px]
+                                          cursor-pointer      pt-3">
+                                        <ion-icon name="logo-linkedin"></ion-icon>
+                                        LinkedIn</button>
+                                </div>
+                                <div class="text-sm text-center w-auto mt-3">
+                                    <div class=" relative text-gray-600 before:absolute before:content-[''] before:h-px
+                                                     before:w-30 before:bg-black before:top-1/2 before:left-0
+                                                      relative text-gray-600 after:absolute after:content-[''] after:h-px
+                                                     after:w-30 aafter:bg-black after:top-1/2 after:-right-0 after:border-1 
+                                                    ">
+                                        or
+                                    </div>
+
+                                </div>
+                                <div>
+                                    <div class="font-bold text-lg">
+                                        <label>Email
+                                            <input type="text" name="email" class="border-1 w-full p-2 top-5" />
+                                        </label>
+
+                                    </div>
+                                </div>
+
+                                <div class="w-full pt-5">
+                                    <button class=" cursor-pointer [50px] p-2 pl-30 pr-30 bg-green-800 
+                                                        text-white font-bold ">LOG IN</button>
+                                </div>
+                                <div class="w-full h-px bg-gray-500 mt-5"></div>
+                                <div class="text-sm">New to capterra? <a class="text-green-800 cursor-pointer font-bold">Sign up</a>
+                                </div>
+                                <div class="text-sm"> you a vendor?<a class="text-green-800 cursor-pointer font-bold"> Log in to the
+                                        Vendor Portal</a></div>
+                                <div class="w-full h-px bg-gray-500 mt-5 text-sm"></div>
+                                <div class="text-sm">By proceeding, you agree to our <a class="text-green-800 cursor-pointer font-bold">
+                                        Terms Of Use </a>and <a class="text-green-800 cursor-pointer font-bold">
+                                        Privacy Policy.</a></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            </div>
+        </div>
+    </div>
+
+
     <!-- Nav -->
-    <div class="menu  sm:block sm:bg-gray-200 sm:pl-8 sm:p-0
+    <div class="menu hidden sm:block sm:bg-gray-200 sm:pl-8 sm:p-1
          h-auto w-auto absolute sm:relative 
         top-0 left-0 z-10 bg-black  text-gray-600 
         sm:text-gray-800 h-full sm:min-h-auto">
+
         <div class="flex  flex-col sm:flex-row 
         items-center justify-between  sm:text-lg  text-xl ">
             <div class="close sm:hidden absolute right-6 top-5 cursor-pointer
@@ -126,7 +202,7 @@
                     </div>
                 </div>
                 <div class="relative group pl-3 sm:p-6  sm:pt-2 cursor-pointer">Guides & Research
-                   
+
                     <div
                         class="absolute left-44 origin-bottom top-4 text-black text-sm group-hover:rotate-180 transition-all duration-200">
                         <div class="border-1 border-black p-1 border-l-0 border-t-0 rotate-45"></div>
@@ -169,10 +245,10 @@
     <!-- dashboard -->
     <div class="m-3 ml-6 mr-6">
         <div class="flex border-1 flex-col sm:flex-cols-4  sm:flex-row 
-            items-start sm:items-center  justify-between 
+            items-start sm:items-center  justify-between  gap-0
             border-gray-700 shadow-gray-600 shadow-sm">
 
-            <div class="order-1 flex p-2 pl-6 pr-10  bg-gray-100 min-w-[100%] sm:min-w-auto">
+            <div class="order-1 flex p-0 pl-6 pr-10  bg-gray-100 min-w-[100%] sm:min-w-auto">
                 <img src="https://gdm-catalog-fmapi-prod.imgix.net/ProductLogo/89ec77a1-26ea-4774-9861-3265726bd8d8.jpeg?auto=format%2Ccompress&fit=max&w=128&q=75&ch=Width%2CDPR"
                     width="80" height="80" class="inline-block" />
                 <div>
@@ -181,31 +257,15 @@
                         <div class="p-6">
                             <a href="#" target="_blank" class="font-bold text-gray-800">Locker</a>
                             <div class="sm:hidden relative">
-                                <div class="inline-block">
-                                    <div class="star border-10 w-[20px]  border-b-green-600
-                            border-l-transparent  border-r-transparent border-t-transparent"></div>
-                                    <div class="star border-10 w-[20px]  border-b-green-600
-                            border-l-transparent  border-r-transparent border-b-transparent"></div>
+
+                                <ion-icon name="star-sharp"></ion-icon>
+                                <ion-icon name="star-sharp"></ion-icon>
+                                <ion-icon name="star-sharp"></ion-icon>
+                                <ion-icon name="star-sharp"></ion-icon>
+                                <ion-icon name="star-half-sharp"></ion-icon>
+
+                                <div class="inline-block absolute w-full text-nowrap -top-1 sm:-top-2 pl-3">4.5 (273)
                                 </div>
-                                <div class="inline-block">
-                                    <div class="star border-10 w-[20px]  border-b-green-600
-                            border-l-transparent  border-r-transparent border-t-transparent"></div>
-                                    <div class="star border-10 w-[20px]  border-b-green-600
-                            border-l-transparent  border-r-transparent border-b-transparent"></div>
-                                </div>
-                                <div class="inline-block">
-                                    <div class="star border-10 w-[20px]  border-b-green-600
-                            border-l-transparent  border-r-transparent border-t-transparent"></div>
-                                    <div class="star border-10 w-[20px]  border-b-green-600
-                            border-l-transparent  border-r-transparent border-b-transparent"></div>
-                                </div>
-                                <div class="inline-block">
-                                    <div class="star border-10 w-[20px]  border-b-green-600
-                            border-l-transparent  border-r-transparent border-t-transparent"></div>
-                                    <div class="star border-10 w-[20px]  border-b-green-600
-                            border-l-transparent  border-r-transparent border-b-transparent"></div>
-                                </div>
-                                <div class="inline-block absolute w-full text-nowrap top-1 sm:top-1 pl-3">4 (273)</div>
                             </div>
 
                         </div>
@@ -213,6 +273,10 @@
                 </div>
 
             </div>
+
+
+            <!-- key Features -->
+
             <div class="order-3 sm:order-2 pl-6 pb-4 ">
                 <div class="font-bold text-lg uppercase">Key Features</div>
                 <div class="inline-block relative p-[5px] pl-30 pr-20 mt-3 bg-green-500 rounded-[50px]
@@ -222,39 +286,30 @@
                 </div>
                 <div class="inline-block">9/10</div>
             </div>
+
+
+
+            <!-- Rating -->
             <div class="order-3 sm:order-3 pl-6 hidden sm:block">
                 <div class="p-3">
                     <div class="font-bold uppercase">Rating</div>
                     <div class="relative">
-                        <div class="inline-block">
-                            <div class="star border-10 w-[20px]  border-b-green-600
-                            border-l-transparent  border-r-transparent border-t-transparent"></div>
-                            <div class="star border-10 w-[20px]  border-b-green-600
-                            border-l-transparent  border-r-transparent border-b-transparent"></div>
-                        </div>
-                        <div class="inline-block">
-                            <div class="star border-10 w-[20px]  border-b-green-600
-                            border-l-transparent  border-r-transparent border-t-transparent"></div>
-                            <div class="star border-10 w-[20px]  border-b-green-600
-                            border-l-transparent  border-r-transparent border-b-transparent"></div>
-                        </div>
-                        <div class="inline-block">
-                            <div class="star border-10 w-[20px]  border-b-green-600
-                            border-l-transparent  border-r-transparent border-t-transparent"></div>
-                            <div class="star border-10 w-[20px]  border-b-green-600
-                            border-l-transparent  border-r-transparent border-b-transparent"></div>
-                        </div>
-                        <div class="inline-block">
-                            <div class="star border-10 w-[20px]  border-b-green-600
-                            border-l-transparent  border-r-transparent border-t-transparent"></div>
-                            <div class="star border-10 w-[20px]  border-b-green-600
-                            border-l-transparent  border-r-transparent border-b-transparent"></div>
-                        </div>
-                        <div class="inline-block absolute w-full text-nowrap top-1 sm:top-1 pl-3">4.6 (273)</div>
+
+
+                        <ion-icon name="star-sharp"></ion-icon>
+                        <ion-icon name="star-sharp"></ion-icon>
+                        <ion-icon name="star-sharp"></ion-icon>
+                        <ion-icon name="star-sharp"></ion-icon>
+                        <ion-icon name="star-half-sharp"></ion-icon>
+                        <div class="inline-block absolute w-full text-nowrap -top-1 sm:-top-1 pl-3">4.5 (273)</div>
                     </div>
 
                 </div>
             </div>
+
+
+
+            <!-- button -->
             <div class="order-2 sm:order-4 pl-6">
                 <div class="m-3 mr-5">
                     <button class="bg-red-600 rounded-[50px]
@@ -374,8 +429,17 @@ hr@digipulsetech. ccom -->
 
 
         </div>
+
+        <div class="m-3 mt-10 p-2 flex flex-row gap-10">
+            
+            
+           <a class="cursor-pointer scale-[2.5]" href="https://www.linkedin.com/in/maniram-yadav/"><ion-icon name="logo-linkedin"></ion-icon></a> 
+           <a class="cursor-pointer scale-[2.5]" href="https://x.com/maniram_"> <ion-icon name="logo-twitter"></ion-icon></a>
+            <a class="cursor-pointer scale-[2.5]" href="https://www.linkedin.com/in/maniram-yadav/">  <ion-icon name="logo-facebook"></ion-icon></a>
+            <a class="cursor-pointer scale-[2.5]" href="https://github.com/maniram-yadav"><ion-icon name="logo-github"></ion-icon></a>
+        </div>
     </div>
-    <script src="index1.js"></script>
+    <script src="dashware.js"></script>
 
 </body>
 
