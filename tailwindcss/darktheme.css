@@ -1,0 +1,65 @@
+body{
+    margin: 0;
+    background-color: white;
+    color: black ;
+    width: 100%;
+}
+
+.nav{
+    margin: 0;
+    position: relative;
+    margin-right: 50px;
+    padding: 20px;   
+    padding-right: 100px;
+    height: auto;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    box-sizing: border-box;
+    box-shadow: 5px 5px 5px rgba(50, 36, 36, 0.5);
+}
+
+
+.dark-theme .nav { 
+    box-shadow: 7px 5px 5px rgba(220, 209, 209, 0.5);   
+}
+.dark-theme {
+    background-color: black;
+    color: white;
+}
+.dashboard {
+    margin: 2px;
+    padding: 10px;
+}
+
+.cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    justify-items: center;
+    align-items: center;
+    gap: 5;
+}
+
+.data {
+    vertical-align: center;
+    place-content: center;
+    background-color: white;
+    border-radius: 10px;
+    border: 1px solid green;
+    padding: 20px;
+    width: 200px;
+    height: 200px;
+    box-shadow: 5px 5px 5px rgb(69, 32, 32);
+}
+
+.dark-theme .data {
+    background-color: rgb(69, 32, 32);
+    box-shadow: 5px 5px 5px rgb(164, 133, 133);
+    color: white;
+}

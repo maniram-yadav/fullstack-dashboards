@@ -154,18 +154,18 @@
     <!-- Nav -->
     <div class="menu hidden sm:block sm:bg-gray-200 sm:pl-8 sm:p-1
          h-auto w-auto absolute sm:relative 
-        top-0 left-0 z-10 bg-black  text-gray-600 
+        top-0 left-0 z-10 bg-black  
         sm:text-gray-800 h-full sm:min-h-auto">
         <!-- <div class="sm:hidden w-full h-full bg-[rgba(0,0,0,.3)] -z-4 p-8"></div> -->
 
 
         <div class="flex  flex-col sm:flex-row 
         items-center justify-between  sm:text-lg  text-xl ">
-            <div class="close sm:hidden absolute right-6 top-5 cursor-pointer">
+            <div class="close sm:hidden absolute right-6 top-5 text-white cursor-pointer">
                 <button onclick="toggleMenu()">X</button>
             </div>
             <div class="flex flex-col sm:flex-row flex-cols-1
-         sm:flex-cols-4 text-gray-400">
+         sm:flex-cols-4  text-gray-300 sm:text-gray-900">
 
                 <div class="sm:hidden p-5 text-gray-300 text-xl pt-6">Menu</div>
                 <div class="pl-2 pr-2  sm:pt-2 sm:w-full border-b-1 sm:hidden
@@ -257,7 +257,7 @@
             </div>
 
             <div class="flex flex-col sm:flex-row flex-cols-1 
-                sm:flex-cols-2">
+                sm:flex-cols-2  text-white sm:text-gray-900">
                 <div class="pl-3 sm:p-6  sm:pt-2  cursor-pointer">For venders</div>
                 <div class="pl-3  sm:p-6  sm:pt-2 cursor-pointer">Write a Review</div>
             </div>
@@ -285,7 +285,7 @@
 
                     <span class="">
                         <div class="p-6">
-                            <a href="#" target="_blank" class="font-bold text-gray-800">Locker</a>
+                            <a href="#" target="_blank" class="font-bold text-gray-800 hover:underline">Locker<ion-icon name="arrow-redo-outline"></ion-icon></a>
                             <div class="sm:hidden relative">
 
                                 <ion-icon name="star-sharp"></ion-icon>
@@ -359,8 +359,95 @@
     </div>
 
 
-
     <!-- dcard 2 -->
+         <div class="m-3 mb-5 ml-6 mr-6">
+        <div class="flex border-1 mt-3 flex-col sm:flex-cols-4 flex-wrap  sm:flex-row 
+            items-start items-start sm:items-center  justify-between  gap-0
+            border-gray-700 shadow-gray-600 shadow-sm">
+
+            <div class="order-1 flex-1  flex p-0 pl-6   bg-gray-100 min-w-[100%] sm:min-w-auto">
+                <img src="https://gdm-catalog-fmapi-prod.imgix.net/ProductLogo/ac52f00d-5ae9-4fd5-9e7d-677962ab63ed.png?auto=format%2Ccompress&fit=max&w=128&q=75&ch=Width%2CDPR"
+                    width="80" height="80" class="inline-block" />
+                <div>
+
+                    <span class="">
+                        <div class="p-6">
+                            <a href="#" target="_blank" class="font-bold text-gray-800 hover:underline">
+                                Grow<ion-icon name="arrow-redo-outline"></ion-icon></a>
+                            <div class="sm:hidden relative">
+
+                                <ion-icon name="star-sharp"></ion-icon>
+                                <ion-icon name="star-sharp"></ion-icon>
+                                <ion-icon name="star-sharp"></ion-icon>
+                                <ion-icon name="star-sharp"></ion-icon>
+                                <ion-icon name="star-half-sharp"></ion-icon>
+
+                                <div class="inline-block absolute w-full text-nowrap -top-1 sm:-top-2 pl-3">4.4 (395)
+                                </div>
+                            </div>
+
+                        </div>
+                    </span>
+                </div>
+
+            </div>
+
+
+            <!-- key Features -->
+
+            <div class="order-3 flex-1  sm:order-2 pl-6 pb-4 ">
+                <div class="font-bold text-lg uppercase">Key Features</div>
+                <div class="inline-block relative p-[5px] pl-30 pr-20 mt-3 bg-green-500 rounded-[50px]
+                        border-2 border-green-500">
+                    <span class="bg-white overflow-hidden
+                             absolute top-0 rounded-r-[40px] right-0 pr-[20px] p-[5px]"></span>
+                </div>
+                <div class="inline-block">8/10</div>
+            </div>
+
+
+
+            <!-- Rating -->
+            <div class="order-3 flex-1  sm:order-3 pl-6 hidden sm:block">
+                <div class="p-3">
+                    <div class="font-bold uppercase">Rating</div>
+                    <div class="relative">
+
+
+                        <ion-icon name="star-sharp"></ion-icon>
+                        <ion-icon name="star-sharp"></ion-icon>
+                        <ion-icon name="star-sharp"></ion-icon>
+                        <ion-icon name="star-sharp"></ion-icon>
+                        <ion-icon name="star-half-sharp"></ion-icon>
+                        <div class="inline-block absolute w-full text-nowrap -top-1 sm:-top-1 pl-3">4.5 (395)</div>
+                    </div>
+
+                </div>
+            </div>
+
+
+
+            <!-- button -->
+            <div class="order-2 flex-1  sm:order-4 pl-6">
+                <div class="m-3 mr-5">
+                    <button class="bg-red-600 rounded-[50px]
+                     p-2 pl-6 pr-6 text-white w-[300px]
+                    cursor-pointer
+                    ">VISIT WEBSITE</button>
+                </div>
+            </div>
+           
+            <div class=" order-2 sm:hidden overflow-hidden">
+                <div class="border-b-1 w-[300px]   border-gray-700 pt-2 mb-2 "></div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <!-- dcard 3 -->
          <div class="m-3 mb-5 ml-6 mr-6">
         <div class="flex border-1 mt-3 flex-col sm:flex-cols-4 flex-wrap  sm:flex-row 
             items-start items-start sm:items-center  justify-between  gap-0
@@ -373,7 +460,7 @@
 
                     <span class="">
                         <div class="p-6">
-                            <a href="#" target="_blank" class="font-bold text-gray-800">Spider Impact</a>
+                            <a href="#" target="_blank" class="font-bold text-gray-800 hover:underline">Spider Impact <ion-icon name="arrow-redo-outline"></ion-icon></a>
                             <div class="sm:hidden relative">
 
                                 <ion-icon name="star-sharp"></ion-icon>
@@ -447,8 +534,184 @@
 
     </div>
 
-    <!-- dcard 3 -->
     <!-- dcard 4 -->
+          <div class="m-3 mb-5 ml-6 mr-6">
+        <div class="flex border-1 mt-3 flex-col sm:flex-cols-4 flex-wrap  sm:flex-row 
+            items-start items-start sm:items-center  justify-between  gap-0
+            border-gray-700 shadow-gray-600 shadow-sm">
+
+            <div class="order-1 flex-1  flex p-0 pl-6   bg-gray-100 min-w-[100%] sm:min-w-auto">
+                <img src="https://www.capterra.com/p/141509/AchieveIt/"
+                    width="80" height="80" class="inline-block" />
+                <div>
+
+                    <span class="">
+                        <div class="p-6">
+                            <a href="#" target="_blank" class="font-bold text-gray-800 hover:underline">AchieveIt<ion-icon name="arrow-redo-outline"></ion-icon></a>
+                            <div class="sm:hidden relative">
+
+                                <ion-icon name="star-sharp"></ion-icon>
+                                <ion-icon name="star-sharp"></ion-icon>
+                                <ion-icon name="star-sharp"></ion-icon>
+                                <ion-icon name="star-sharp"></ion-icon>
+                                <ion-icon name="star-sharp"></ion-icon>
+                                <!-- <ion-icon name="star-half-sharp"></ion-icon> -->
+
+                                <div class="inline-block absolute w-full text-nowrap -top-1 sm:-top-2 pl-3">5 (200)
+                                </div>
+                            </div>
+
+                        </div>
+                    </span>
+                </div>
+
+            </div>
+
+
+            <!-- key Features -->
+
+            <div class="order-3 flex-1  sm:order-2 pl-6 pb-4 ">
+                <div class="font-bold text-lg uppercase">Key Features</div>
+                <div class="inline-block relative p-[5px] pl-30 pr-20 mt-3 bg-green-500 rounded-[50px]
+                        border-2 border-green-500">
+                    <!-- <span class="bg-white overflow-hidden
+                             absolute top-0 rounded-r-[40px] right-0 pr-[10px] p-[5px]"></span> -->
+                </div>
+                <div class="inline-block">10/10</div>
+            </div>
+
+
+
+            <!-- Rating -->
+            <div class="order-3 flex-1  sm:order-3 pl-6 hidden sm:block">
+                <div class="p-3">
+                    <div class="font-bold uppercase">Rating</div>
+                    <div class="relative">
+
+
+                        <ion-icon name="star-sharp"></ion-icon>
+                        <ion-icon name="star-sharp"></ion-icon>
+                        <ion-icon name="star-sharp"></ion-icon>
+                        <ion-icon name="star-sharp"></ion-icon>
+                        <ion-icon name="star-sharp"></ion-icon>
+                        <!-- <ion-icon name="star-half-sharp"></ion-icon> -->
+                    <div class="inline-block absolute w-full text-nowrap -top-1 sm:-top-1 pl-3">5 (200)</div>
+                    </div>
+
+                </div>
+            </div>
+
+
+
+            <!-- button -->
+            <div class="order-2 flex-1  sm:order-4 pl-6">
+                <div class="m-3 mr-5">
+                    <button class="bg-red-600 rounded-[50px]
+                     p-2 pl-6 pr-6 text-white w-[300px]
+                    cursor-pointer
+                    ">VISIT WEBSITE</button>
+                </div>
+            </div>
+           
+            <div class=" order-2 sm:hidden overflow-hidden">
+                <div class="border-b-1 w-[300px]   border-gray-700 pt-2 mb-2 "></div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+    <!-- dcard 5 -->
+         <div class="m-3 mb-5 ml-6 mr-6">
+        <div class="flex border-1 mt-3 flex-col sm:flex-cols-4 flex-wrap  sm:flex-row 
+            items-start items-start sm:items-center  justify-between  gap-0
+            border-gray-700 shadow-gray-600 shadow-sm">
+
+            <div class="order-1 flex-1  flex p-0 pl-6   bg-gray-100 min-w-[100%] sm:min-w-auto">
+                <img src="https://gdm-catalog-fmapi-prod.imgix.net/ProductLogo/080721c6-6755-47a6-8db8-4be836af90ab.png?auto=format%2Ccompress&fit=max&w=128&q=75&ch=Width%2CDPR"
+                    width="80" height="80" class="inline-block" />
+                <div>
+
+                    <span class="">
+                        <div class="p-6">
+                            <a href="#" target="_blank" class="font-bold text-gray-800 hover:underline">
+                                Logi Symphony<ion-icon name="arrow-redo-outline"></ion-icon></a>
+                            <div class="sm:hidden relative">
+
+                                <ion-icon name="star-sharp"></ion-icon>
+                                <ion-icon name="star-sharp"></ion-icon>
+                                <ion-icon name="star-sharp"></ion-icon>
+                                <ion-icon name="star-sharp"></ion-icon>
+                                <ion-icon name="star-half-sharp"></ion-icon>
+
+                                <div class="inline-block absolute w-full text-nowrap -top-1 sm:-top-2 pl-3">4.5 (260)
+                                </div>
+                            </div>
+
+                        </div>
+                    </span>
+                </div>
+
+            </div>
+
+
+            <!-- key Features -->
+
+            <div class="order-3 flex-1  sm:order-2 pl-6 pb-4 ">
+                <div class="font-bold text-lg uppercase">Key Features</div>
+                <div class="inline-block relative p-[5px] pl-30 pr-20 mt-3 bg-green-500 rounded-[50px]
+                        border-2 border-green-500">
+                    <span class="bg-white overflow-hidden
+                             absolute top-0 rounded-r-[40px] right-0 pr-[10px] p-[5px]"></span>
+                </div>
+                <div class="inline-block">9/10</div>
+            </div>
+
+
+
+            <!-- Rating -->
+            <div class="order-3 flex-1  sm:order-3 pl-6 hidden sm:block">
+                <div class="p-3">
+                    <div class="font-bold uppercase">Rating</div>
+                    <div class="relative">
+
+
+                        <ion-icon name="star-sharp"></ion-icon>
+                        <ion-icon name="star-sharp"></ion-icon>
+                        <ion-icon name="star-sharp"></ion-icon>
+                        <ion-icon name="star-sharp"></ion-icon>
+                        <ion-icon name="star-half-sharp"></ion-icon>
+                        <div class="inline-block absolute w-full text-nowrap -top-1 sm:-top-1 pl-3">4.5 (260)</div>
+                    </div>
+
+                </div>
+            </div>
+
+
+
+            <!-- button -->
+            <div class="order-2 flex-1  sm:order-4 pl-6">
+                <div class="m-3 mr-5">
+                    <button class="bg-red-600 rounded-[50px]
+                     p-2 pl-6 pr-6 text-white w-[300px]
+                    cursor-pointer
+                    ">VISIT WEBSITE</button>
+                </div>
+            </div>
+           
+            <div class=" order-2 sm:hidden overflow-hidden">
+                <div class="border-b-1 w-[300px]   border-gray-700 pt-2 mb-2 "></div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
     <!-- dcard 5 -->
     <!-- dcard 6 -->
     <!-- dcard 7 -->
