@@ -1,0 +1,56 @@
+.container {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 80px;
+    height: 100vh;
+    background-color: black;
+    padding-top: 30px;
+    white-space: nowrap;
+    overflow: hidden;
+    transition: 0.3s;
+    color: white;
+    padding-left: 20px;
+    overflow: scroll;
+    
+}
+
+.sidebar > div { 
+    padding-top: 200px;
+}
+
+.sidebar >div> div:hover {
+    cursor: pointer;
+    background: gray;
+
+}
+.sidebar:hover {
+    width: 200px;
+}
+
+.sidebar:hover + .main {
+    padding-left: 220px
+}
+
+.main {
+    flex:1;
+    padding-left: 120px;
+    transition: .3s;
+    height: 1400px;
+    color: black;
+}
+
+.pside {
+    position: relative;
+}
+
+.menu {
+
+}

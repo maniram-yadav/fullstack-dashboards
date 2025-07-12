@@ -1,0 +1,31 @@
+
+.container{
+    --bgcolor:rgba(230, 209, 209, 0.8);
+    --width:0px;
+    --height:0px;
+}
+.container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left:0;
+    width: var(--width);
+    height: 100%;
+    /* background-color: aquamarine; */
+    background-color: var(--bgcolor);
+    z-index: 10;
+    border-right:1px solid green ;
+    overflow: hidden;
+}
+
+@media screen and (max-width: 600px) {
+    .container::before {
+        
+        width: 100%;
+        height: var(--height);
+        top: -200px;
+        left: -220px;
+        overflow: hidden;
+        transform: rotate(-45deg);
+    }
+}
