@@ -1,0 +1,27 @@
+<html>
+
+<head>
+    <title>Dark Theme Demo</title>
+
+    <link rel="stylesheet" href="dropdown1.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body>
+    <div class="dropdown group select relative w-30 h-auto p-2 m-2 bg-white rounded-md bg-white
+                border-1 p-5 shadow-gray-500"  onclick="toggleOption('options')">
+        <div class="value absolute top-2 left-2" value="">Select</div>
+       
+        <div class="options hidden  absolute top-10 left-0  
+                w-30  h-auto p-1 border-1 rounded-b-md bg-white shadow-lg shadow-gray-800">
+            <div class="bg-white p-2 hover:bg-gray-200 cursor-pointer" value="op1" 
+                    onclick="setValue(this); ">Option 1</div>
+            <div class="bg-white p-2 hover:bg-gray-200 cursor-pointer" value="op2" onclick="setValue(this);">Option 2</div>
+            <div class="bg-white p-2 hover:bg-gray-200 cursor-pointer" value="op3" onclick="setValue(this);">Option 3</div>
+            <div class="bg-white p-2 hover:bg-gray-200 cursor-pointer" value="op4" onclick="setValue(this);">Option 4</div>
+        </div>
+    </div>
+    <script src="dropdown1.js"></script>
+</body>
+
+</html>
