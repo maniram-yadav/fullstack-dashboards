@@ -1,0 +1,79 @@
+.carousel-container {
+    width: 500px;
+    height: 300px;   
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    position: relative;
+    border: 2px solid black;
+    box-shadow: 5px 5px 5px gray;
+    overflow: hidden;
+}
+
+.item-list{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    transform: .5s ease;
+}
+
+.carousel-item {
+    min-width: 500px;
+    min-height: 400px;
+    box-sizing: border-box;
+    position: relative;
+
+}
+
+.previous {
+    z-index: 10;
+    padding: 10px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    color: black;
+    text-shadow: 3;
+    font-size: large;
+    background-color: azure;
+    cursor: pointer;
+    box-shadow: 5px 5px 5px red;
+}
+
+
+
+.next {
+    z-index: 10;
+    padding: 10px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    color: black;
+    text-shadow: 3;
+    font-size: large;
+    background-color: azure;
+    cursor: pointer;
+    box-shadow: 5px 5px 5px red;
+
+}
+
+.carousel-view{
+    transition: .3s ease-in-out;
+}
+
+.img-description{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    justify-items: baseline;
+    background-color: rgba(0,0,0,.4);
+    height: auto;
+    width: 100%;
+    /* padding: 20px; */
+    color: white;
+    z-index: 20;
+}
