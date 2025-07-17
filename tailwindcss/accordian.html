@@ -1,0 +1,40 @@
+<html>
+
+<head>
+    <title>Dark Theme Demo</title>
+
+    <link rel="stylesheet" href="accordian.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body>
+    <div class="accordion relative top-[40%] left-[40%] p-10 h-auto ">
+        <div class="w-[fit-content] h-auto border-1 shadow-md 
+                shadow-gray-200  rounded-md ">
+            <div class="accordion-item border-1  bg-gray-200 border-black 
+                w-45 h-auto">
+                <button class="accordion-header cursor-pointer p-2">
+                    Accordion Title 1
+                </button>
+                <div class="accordion-content bg-white text-center align-middle h-0 left-1 top-3 box-border
+                    transition-all duration-500 ease-in-out  overflow-hidden">
+                    <span class="inline-block align-middle">  Accordion Content 1</span>
+                </div>
+            </div>
+             <div class="accordion-item border-1  bg-gray-200 border-black 
+                w-45 h-auto">
+                <button class="accordion-header cursor-pointer p-2">
+                    Accordion Title 2
+                </button>
+                <div class="accordion-content bg-white text-center align-middle h-0 left-1 top-3 box-border
+                    transition-all duration-500 ease-in-out  overflow-hidden">
+                    <span class="inline-block align-middle">  Accordion Content 2</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="accordian.js"></script>
+</body>
+
+</html>

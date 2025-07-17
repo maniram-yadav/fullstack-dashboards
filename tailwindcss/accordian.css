@@ -1,0 +1,33 @@
+.accordion {
+    @apply p-10 m-10 relative block top-[50%] left-[50%];
+}
+
+.accordion-item {
+    @apply border rounded-md overflow-hidden;
+}
+
+.accordion-header {
+    @apply bg-gray-100 dark:bg-gray-700 text-left px-4 py-2 w-full flex justify-between items-center focus:outline-none focus:ring-2 focus:ring-blue-500;
+}
+/* 
+.accordion-content {
+    @apply p-4 bg-white dark:bg-gray-800;
+    transition: max-height 0.3s ease-out;
+    
+    max-height: 0;
+   
+    overflow: hidden;
+} */
+
+.accordion-header::after {
+    content: '+';
+    /* Default icon */
+    font-size: 1.5rem;
+    transition: transform 0.3s ease-out;
+}
+
+.accordion-header.active::after {
+    content: '-';
+    /* Active icon */
+    transform: rotate(180deg);
+}
